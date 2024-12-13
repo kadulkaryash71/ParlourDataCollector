@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+
+    <form action="" method="POST" class="w-50 m-auto p-5 border border-2 border-primary-subtle rounded-4 shadow">
+        <h2 class="h4 px-3 py-2 mb-3 form-header border-start border-4 border-primary">Diary Entry</h2>
+        <div class="mb-3">
+            <label for="service-name" class="form-label">Customer Name <em>(optional)</em></label>
+            <input type="text" id="service-name" class="col-md-9 form-control border border-1 border-success" placeholder="Ex. Eyebrow">
+        </div>
+        <div class="mb-3">
+            <label for="total-amount" class="form-label">Total Amount (in ₹)</label>
+            <input type="text" id="total-amount" name="total-amount" class="col-md-9 form-control border border-1 border-success" placeholder="Ex. 450" disabled>
+        </div>
+        <div class="mb-3">
+            <label for="transaction-amount" class="form-label">Amount Paid (in ₹)</label>
+            <input type="text" id="transaction-amount" name="transaction-amount" class="col-md-9 form-control border border-1 border-success" placeholder="Ex. 450">
+        </div>
+
+    </form>
+
+{% endblock main %}

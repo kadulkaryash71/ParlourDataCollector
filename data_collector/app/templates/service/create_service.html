@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+
+    <form action="" method="POST" class="w-50 m-auto p-5 border border-2 border-primary-subtle rounded-4 shadow">
+        {% csrf_token %}
+        <h2 class="h4 px-3 py-2 mb-4 form-header border-start border-4 border-primary">Add a New Service</h2>
+        <div class="row align-items-center justify-content-center input-group">
+            <label for="service-name" class="col-md-3 form-label">Title of the service</label>
+            <input type="text" id="service-name" name="service-name" class="col-md-9 form-control border border-1 border-primary" placeholder="Ex. Eyebrow" autocomplete="off">
+        </div>
+        <div class="row align-items-center justify-content-center input-group">
+            <label for="service-rate" class="col-md-3 form-label">Price (in ₹)</label>
+            <input type="text" id="service-rate" name="service-rate" class="col-md-9 form-control border border-1 border-primary" placeholder="Ex. 450" autocomplete="off">
+        </div>
+        <div class="w-100 mt-4 text-center">
+            <button type="submit" class="btn btn-primary w-25 m-auto"><i class="bi bi-plus-circle"></i> Create</button>
+        </div>
+    </form>
+
+{% endblock main %}
